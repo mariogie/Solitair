@@ -2,7 +2,7 @@
  * Solitair
  * with Java-Script
  * 
- * develloped by M. Gießler
+ * develloped by M. Giessler
  * 
  * Version 1.0 (between May, 27th and June, 7th)
  * 
