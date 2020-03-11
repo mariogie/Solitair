@@ -1,11 +1,11 @@
-/* 
+/*
  * Solitair
  * with Java-Script
- * 
+ *
  * develloped by M. Giessler
- * 
+ *
  * Version 1.0 (between May, 27th and June, 7th)
- * 
+ *
  */
 
 // declare Global variables
@@ -21,6 +21,8 @@ let pins = 32;
 document.addEventListener("click", set);
 
 drawBoard();
+
+const $ =element=>document.querySelector(element);
 
 // draw the Gameboard inside of the div with id "main_container"
 function drawBoard() {
@@ -51,12 +53,12 @@ function drawBoard() {
         }
     }
 
-/* 
+/*
  * write all Positions for the Pins on Board in an Array
  * this Array is used to check the Moves during the Game
  */
 
-    for (j = 0; j < 70; j = j + 10) { 
+    for (j = 0; j < 70; j = j + 10) {
         let newRow = document.createElement('tr');
 
         newTable.appendChild(newRow);
@@ -82,7 +84,7 @@ function drawBoard() {
     }
 
 // the Pin in the middle must be removed
-    pinPos[43] = 0; 
+    pinPos[43] = 0;
     document.getElementById('43').classList.add("hide");
 
     pinsLeft();
@@ -92,7 +94,7 @@ function drawBoard() {
  * this Function check all available Moves for the choosed Pin
  */
 
-function checkRange(buttonId) { 
+function checkRange(buttonId) {
 
     if (pinPos[buttonId] == 1 ? checkedPin = true : checkedPin = false)
         ;
@@ -198,7 +200,7 @@ function set() {
     pinsLeft();
 }
 
-/* 
+/*
  * How many Pins are left on Board?
  * and how many Moves are available at this time?
  */
