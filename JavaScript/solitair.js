@@ -55,31 +55,30 @@ const drawGameArea = () => {
   $('#game_frame').appendChild(gameInfo);
 };
 
-const addRow=()=>$('#board').appendChild(document.createElement('tr'));
+const addRow = () => $('#board').appendChild(document.createElement('tr'));
 const addCell = row => {
 
   row.forEach(cell => {
 
-    $('#board tr').appendChild(document.createElement('td'));
+    $('#board tr:last-child').appendChild(document.createElement('td'));
 
-    if (cell < 3) {
+    if (cell < 2) {
       const button = document.createElement('button');
 
       if (cell === 0) {
         button.classList.add("hide");
       }
-      $('#board tr td').appendChild(button);
+      $('#board tr:last-child td:last-child').appendChild(button);
     }
-addRow();
   });
 
 }
 
 drawGameArea();
-pinSet.forEach(x =>{
-
+pinSet.forEach(x => {
+  addRow();
   addCell(x);
-} );
+});
 
 
 
