@@ -1,11 +1,11 @@
-/* 
+/*
     Created on : 23.05.2019, 13:24:56
     Author     : m.giessler
 */
 
-#main_frame{
+#game_frame{
     height: 500px;
-    width: 500px;    
+    width: 500px;
 }
 
 #headline{
@@ -19,8 +19,8 @@
     vertical-align: middle;
     background-color: #fff7af;
     border: 5px solid brown;
-    border-radius: 500px; 
-    box-shadow: 10px 10px 10px black;  
+    border-radius: 500px;
+    box-shadow: 10px 10px 10px black;
     padding: 5px;
 }
 
@@ -35,51 +35,50 @@
     padding: .5em;
     background-color: #fff7af;
     border: 5px solid brown;
-    border-radius: 500px; 
-    box-shadow: 10px 10px 10px black;  
+    border-radius: 500px;
+    box-shadow: 10px 10px 10px black;
 }
 
-#main_frame table{
+#game_frame table{
     margin: auto;
     padding: 40px;
     background-color: #fff7af;
     border: 5px solid brown;
-    border-radius: 500px; 
+    border-radius: 500px;
     box-shadow: 10px 10px 10px black;
 }
 
-#main_frame button{
+#game_frame button{
 
     height: 3em;
     width: 3em;
     margin: .25em;
-    padding: .25em;  
+    padding: .25em;
     border: 8px solid #c55115;
     background-color: #772222;
-    border-radius: 100px; 
+    border-radius: 100px;
     box-shadow: black 5px 5px 5px;
 }
 
-#main_frame button.select{
+#game_frame button.select{
     border-color: #ff3333;
     background-color: #772222;
     box-shadow: black 5px 5px 5px;
 
 }
-#main_frame button.deselect{
+#game_frame button.deselect{
     border-color: #c55115;
     background-color: #772222;
     box-shadow: black 5px 5px 5px;
 }
-#main_frame button.hide{
+#game_frame button.hide{
     border-color: transparent;
     border-width: 2px;
     box-shadow: inset black 10px 10px 10px;
     background-color: #9d996c;
 }
 
-#main_frame button:hover{
+#game_frame button:hover{
     opacity: 0.6;
     visibility: visible;
 }
-
