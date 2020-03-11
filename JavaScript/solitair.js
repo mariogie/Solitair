@@ -40,13 +40,49 @@ const createFullElement = (element, name = "", text = "") => {
 };
 
 const drawGameArea = () => {
-  $('#main_container').appendChild(createFullElement('div', "game_frame"));
-  $('#game_frame').appendChild(createFullElement('div', "headline", "Solitair"));
-  $('#game_frame').appendChild(createFullElement('table', "board"));
-  $('#game_frame').appendChild(createFullElement('div', "display_info"));
+  const gameFrame = document.createElement('div');
+  gameFrame.id = "game_frame";
+  $('#main_container').appendChild(gameFrame);
+  const headline = document.createElement('div');
+  headline.id = "headline";
+  headline.textContent = "Solitair";
+  $('#game_frame').appendChild(headline);
+  const gameTable = document.createElement('table');
+  gameTable.id = "board";
+  $('#game_frame').appendChild(gameTable);
+  const gameInfo = document.createElement('div');
+  gameInfo.id = "game_info"
+  $('#game_frame').appendChild(gameInfo);
 };
 
+const addRow=()=>$('#board').appendChild(document.createElement('tr'));
+const addCell = row => {
+
+  row.forEach(cell => {
+
+    $('#board tr').appendChild(document.createElement('td'));
+
+    if (cell < 3) {
+      const button = document.createElement('button');
+
+      if (cell === 0) {
+        button.classList.add("hide");
+      }
+      $('#board tr td').appendChild(button);
+    }
+addRow();
+  });
+
+}
+
 drawGameArea();
+pinSet.forEach(x =>{
+
+  addCell(x);
+} );
+
+
+
 
 // draw the Gameboard inside of the div with id "main_container"
 function drawBoard() {
